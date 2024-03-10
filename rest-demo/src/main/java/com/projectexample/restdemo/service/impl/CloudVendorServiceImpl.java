@@ -14,9 +14,6 @@ public class CloudVendorServiceImpl implements CloudVendorService
 {
     CloudVendorRepository cloudVendorRepository;
 
-    public CloudVendorServiceImpl() {
-    }
-
     public CloudVendorServiceImpl(CloudVendorRepository cloudVendorRepository) {
         this.cloudVendorRepository = cloudVendorRepository;
     }

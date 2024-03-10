@@ -3,22 +3,14 @@ package com.projectexample.restdemo.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name="Cloud_Vendor_Info")
 public class CloudVendor {
     @Id
     String VendorId;
-    @NotEmpty
     String  VendorName;
-    @NotEmpty
     String VendorAddress;
-    @NotEmpty
-    @Size(min=10,max=10 ,message = "Please Enter Valid Phone Number")
-    @Pattern(regexp="(^$|[0-9]{10})")
     String VendorPhoneNo;
 
     public String getVendorId() {
