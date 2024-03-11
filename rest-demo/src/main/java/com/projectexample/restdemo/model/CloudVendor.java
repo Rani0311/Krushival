@@ -12,6 +12,8 @@ import jakarta.validation.constraints.Size;
 public class CloudVendor {
     @Id
     String VendorId;
+
+    //validation
     @NotEmpty
     String  VendorName;
     @NotEmpty

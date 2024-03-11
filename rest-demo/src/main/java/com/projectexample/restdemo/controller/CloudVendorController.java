@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+//Response Handling
 @RestController
 @RequestMapping("/cloudvendor")
 public class CloudVendorController {

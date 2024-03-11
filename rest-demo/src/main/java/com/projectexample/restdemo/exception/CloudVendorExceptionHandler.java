@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//Exception handling
 @ControllerAdvice
 public class CloudVendorExceptionHandler {
     @ExceptionHandler(value = CloudVendorNotFoundException.class)
