@@ -3,6 +3,7 @@ package com.projectexample.restdemo.exception;
 import org.springframework.http.HttpStatus;
 
 public class CloudVendorException {
+    //Exception handling
     private  final String message;
     private  final  Throwable throwable;
     private  final HttpStatus httpStatus;
