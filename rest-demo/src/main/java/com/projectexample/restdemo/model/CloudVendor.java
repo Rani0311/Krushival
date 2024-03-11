@@ -13,7 +13,7 @@ public class CloudVendor {
     @Id
     String VendorId;
 
-    //validation
+    //validation for input user
     @NotEmpty
     String  VendorName;
     @NotEmpty
