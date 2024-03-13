@@ -29,21 +29,21 @@ public class CloudVendorController {
 
     }
     @GetMapping
-    public ResponseEntity <List<CloudVendor>> getAllCloudVendorDetails()
+    public ResponseEntity <List<CloudVendor>> getAllCloudendorDetails()
     {
         List<CloudVendor>list=cloudVendorService.getAllCloudVendor();
-        if(list.size()<=0)
+        if(list.isEmpty())
         {
             return  ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         return  ResponseEntity.of(Optional.of(list));
-       // return ResponseHandler.responseBuilder("All Vendor Details are given here",HttpStatus.OK,cloudVendorService.getAllCloudVendor());
+
 
     }
     @PostMapping
     public  ResponseEntity<Object> CreateCloudVendorDetails(@RequestBody CloudVendor cloudVendor)
     {
-       return ResponseHandler.responseBuilder("cloud vendor created",HttpStatus.CREATED,cloudVendorService.createCloudVendor( cloudVendor));
+       return ResponseHandler.responseBuilder("The Vendor was created successfully",HttpStatus.CREATED,cloudVendorService.createCloudVendor( cloudVendor));
 
 
 
@@ -51,12 +51,12 @@ public class CloudVendorController {
     @PutMapping
     public ResponseEntity<Object> updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor)
     {
-        return ResponseHandler.responseBuilder("cloud vendor updated",HttpStatus.OK,cloudVendorService.updateCloudVendor( cloudVendor));
+        return ResponseHandler.responseBuilder("The Vendor was update successfully",HttpStatus.OK,cloudVendorService.updateCloudVendor( cloudVendor));
 
     }
     @DeleteMapping
     public  ResponseEntity<Object> DeleteCloudVendorDetails(@PathVariable("VendorId") String VendorId)
     {
-        return  ResponseHandler.responseBuilder("cloud vendor Deleted", HttpStatus.OK,cloudVendorService.deleteCloudVendor(VendorId));
+        return  ResponseHandler.responseBuilder("The Vendor was deleted successfully", HttpStatus.OK,cloudVendorService.deleteCloudVendor(VendorId));
     }
 }
