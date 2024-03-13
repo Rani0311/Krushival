@@ -1,5 +1,5 @@
 package com.projectexample.restdemo.exception;
-//Exception handling
+//Exception handler
 public class CloudVendorNotFoundException extends  RuntimeException{
     public CloudVendorNotFoundException(String message) {
         super(message);
