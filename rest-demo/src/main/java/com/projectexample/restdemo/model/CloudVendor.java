@@ -13,13 +13,13 @@ public class CloudVendor {
     @Id
     String VendorId;
 
-    //validation
+    //validation for input user
     @NotEmpty
     String  VendorName;
     @NotEmpty
     String VendorAddress;
     @NotEmpty
-    @Size(min=10,max=10 ,message = "Please Enter Valid Phone Number")
+    @Size(min=10,max=10 ,message =  "Oops! The phone number format is not correct")
     @Pattern(regexp="(^$|[0-9]{10})")
     String VendorPhoneNo;
 
