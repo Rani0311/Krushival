@@ -3,5 +3,7 @@ spring:
     url:jdbc:mysql://localhost:3306/cloud_vendor?useSSl=false
     username:root
     password:ajit1234@
-
-    jpa.hibernate.ddl_auto:create
+    
+    jpa.generate-ddl=true
+    jpa.show-sql=true
+    jpa.hibernate.ddl-auto:update

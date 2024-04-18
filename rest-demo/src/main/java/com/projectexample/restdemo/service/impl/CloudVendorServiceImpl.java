@@ -44,8 +44,7 @@ public class CloudVendorServiceImpl implements CloudVendorService
 
     @Override
     public CloudVendor getCloudVendor(String VendorId) {
-        if(cloudVendorRepository.findById(VendorId).isEmpty())
-        {
+        if (cloudVendorRepository.findById(VendorId).isEmpty()) {
             throw new CloudVendorNotFoundException("Request Cloud Vendor does not exit");
         }
 

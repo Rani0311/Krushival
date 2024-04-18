@@ -33,7 +33,7 @@ public class CloudVendorController {
 
     }
     @GetMapping
-    public ResponseEntity <List<CloudVendor>> getAllCloudendorDetails()
+    public ResponseEntity <List<CloudVendor>> getAllCloudVendorDetails()
     {
         List<CloudVendor>list=cloudVendorService.getAllCloudVendor();
         if(list.isEmpty())
